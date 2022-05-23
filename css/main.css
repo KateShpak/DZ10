@@ -23,12 +23,12 @@ body {
 
 .container {
     margin: 0 auto;
-    padding: 0 5px;
-    max-width: 1340px;
+    padding: 0 10px;
+    max-width: 1330px;
 }
 
 header .container {
-    max-width: 1370px;
+    max-width: 1360px;
 }
 
 section {
@@ -129,6 +129,7 @@ header .button {
 }
 
 /*section__presentation*/
+
 .section__presentation {
     padding: 129px 0 172px 0;
 }
@@ -147,7 +148,11 @@ header .button {
 }
 
 .section__presentation .right {
-    min-width: 759px;
+    max-width: 684px;
+}
+
+.section__presentation .right img{
+    width: 100%;
 }
 
 h1 {
@@ -203,6 +208,8 @@ h1 {
 .bottom {
     display: inline-flex;
     column-gap: 103px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 /*section__main*/
@@ -304,6 +311,7 @@ h1 {
     font-weight: 600;
     font-size: 2.5rem;
     margin-bottom: 75px;
+    line-height: 3rem;
 }
 
 .section__boost h5 {
@@ -415,7 +423,6 @@ h1 {
 
 .section__tools img {
     margin-bottom: 32px;
-
 }
 
 .section__tools .button {
@@ -557,4 +564,229 @@ footer .flex__wrapper {
 .bottom p {
     font-size: 0.6rem;
     line-height: 0.75rem;
+}
+
+
+
+@media screen and (max-width: 1024px){
+
+      html {
+        font-size: 18px;
+    }
+
+    .container {
+        max-width: 890px;
+    }
+
+    header .container {
+        max-width: 920px;
+    }
+
+    /*header*/
+
+
+
+    .logo {
+        margin-right: 5px;
+    }
+
+    nav {
+        margin: 0 auto;
+        gap: 18px;
+    }
+
+       header .button {
+        min-width: 100px;
+        padding: 5px 20px;
+    }
+
+
+    /*section__presentation*/
+
+    .section__presentation {
+        padding: 100px 0 142px 0;
+    }
+
+
+    .section__presentation .right {
+        min-width: 410px;
+    }
+
+    .section__presentation .button {
+        min-width: 125px;
+        padding: 10px 20px;
+    }
+
+    /*section__partners*/
+
+    .section__partners {
+        padding: 100px 0 96px 0;
+    }
+
+     .bottom {
+        gap: 50px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    /*section__main*/
+    .flex__article {
+        gap: 15px;
+        margin-bottom: 90px;
+    }
+
+
+    .section__main {
+        padding: 90px 0 90px 0;
+    }
+
+    .section__main img {
+        width: 100%;
+    }
+    .left .correct {
+        max-width: 443px;
+    }
+    .right .correct {
+        max-width: 410px;
+    }
+
+
+    /*section__promo*/
+    .section__promo {
+        padding: 100px 0 120px 0;
+    }
+
+    .section__promo h3 {
+        line-height: 3rem;
+    }
+
+    /*section__boost*/
+
+    .section__boost {
+        padding: 90px 0 135px 0;
+
+    }
+
+    .section__boost .flex__wrapper {
+        gap: 31px;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+
+    .section__boost h5 {
+        font-weight: 600;
+        font-size: 1.5rem;
+        margin-bottom: 34px;
+    }
+
+    .section__boost article {
+        max-width: 250px;
+    }
+    .section__boost article img{
+        width: 100%;
+    }
+
+    .section__boost p {
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        margin-bottom: 25px;
+    }
+
+    .section__boost img {
+        margin-bottom: 50px;
+    }
+
+    /*section__cutaway*/
+
+    .section__cutaway {
+        padding: 53px 0 65px 0;
+    }
+
+    .section__cutaway .flex__wrapper {
+        gap: 12px;
+    }
+
+
+    /*section__software*/
+    .section__software {
+        padding: 35px 0 35px 0;
+    }
+
+    .section__software .flex__wrapper {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .section__software .left {
+        display: inline-flex;
+        gap: 30px;
+    }
+
+    .section__software .cake{
+        min-width: 170px;
+    }
+    .section__software .left img{
+        width: 100%;
+    }
+
+       .section__software .right {
+        padding: 20px 50px;
+    }
+
+    .section__software .right img:first-child {
+        margin: 0 15px 15px 0;
+    }
+
+    /*section__tools*/
+
+    .section__tools {
+        padding: 110px 0 105px 0
+    }
+    .section__tools img{
+    width: 100%;
+    }
+
+    .section__tools .button {
+        padding: 12px 15px;
+        min-width: 167px;
+    }
+
+    /*.section__trial*/
+
+    .section__trial {
+        padding: 100px 0 120px 0;
+    }
+
+    .section__trial .button {
+        padding: 12px 20px;
+        min-width: 140px;
+    }
+
+    /*footer*/
+
+    footer {
+        padding: 65px 0 30px 0;
+
+    }
+    footer .left {
+        min-width: 260px;
+        margin-right: 50px;
+    }
+
+    footer .right {
+        min-width: 400px;
+        column-gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .photo img{
+        width: 100%;
+    }
+
+    .column {
+        flex-basis: 170px;
+    }
+
 }
