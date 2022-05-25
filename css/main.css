@@ -151,7 +151,7 @@ header .button {
     max-width: 684px;
 }
 
-.section__presentation .right img{
+.section__presentation .right img {
     width: 100%;
 }
 
@@ -207,9 +207,10 @@ h1 {
 
 .bottom {
     display: inline-flex;
-    column-gap: 103px;
+    gap: 103px;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
 /*section__main*/
@@ -306,7 +307,7 @@ h1 {
     align-items: baseline;
 }
 
-.section__boost h3 {   /*cтранно, что не по центру,но так в макете*/
+.section__boost h3 { /*cтранно, что не по центру,но так в макете*/
     font-family: 'GraphikLCG_Semibold', 'sans-serif';
     font-weight: 600;
     font-size: 2.5rem;
@@ -495,6 +496,7 @@ footer {
 
 footer .left {
     max-width: 300px;
+    margin-right: 20px;
 }
 
 footer .left a {
@@ -516,8 +518,9 @@ footer .left h5 {
 footer .right {
     padding: 0 0 0 10px;
     display: inline-flex;
-    min-width: 705px;
-    column-gap: 100px
+    min-width: 605px;
+    column-gap: 100px;
+    justify-content: space-around;
 }
 
 .photo {
@@ -566,11 +569,8 @@ footer .flex__wrapper {
     line-height: 0.75rem;
 }
 
-
-
-@media screen and (max-width: 1024px){
-
-      html {
+@media screen and (max-width: 1024px) {
+    html {
         font-size: 18px;
     }
 
@@ -583,9 +583,6 @@ footer .flex__wrapper {
     }
 
     /*header*/
-
-
-
     .logo {
         margin-right: 5px;
     }
@@ -595,18 +592,15 @@ footer .flex__wrapper {
         gap: 18px;
     }
 
-       header .button {
+    header .button {
         min-width: 100px;
         padding: 5px 20px;
     }
 
-
     /*section__presentation*/
-
     .section__presentation {
         padding: 100px 0 142px 0;
     }
-
 
     .section__presentation .right {
         min-width: 410px;
@@ -618,12 +612,11 @@ footer .flex__wrapper {
     }
 
     /*section__partners*/
-
     .section__partners {
         padding: 100px 0 96px 0;
     }
 
-     .bottom {
+    .bottom {
         gap: 50px;
         flex-wrap: wrap;
         justify-content: space-evenly;
@@ -635,7 +628,6 @@ footer .flex__wrapper {
         margin-bottom: 90px;
     }
 
-
     .section__main {
         padding: 90px 0 90px 0;
     }
@@ -643,13 +635,14 @@ footer .flex__wrapper {
     .section__main img {
         width: 100%;
     }
+
     .left .correct {
         max-width: 443px;
     }
+
     .right .correct {
         max-width: 410px;
     }
-
 
     /*section__promo*/
     .section__promo {
@@ -661,7 +654,6 @@ footer .flex__wrapper {
     }
 
     /*section__boost*/
-
     .section__boost {
         padding: 90px 0 135px 0;
 
@@ -673,7 +665,6 @@ footer .flex__wrapper {
         align-items: baseline;
     }
 
-
     .section__boost h5 {
         font-weight: 600;
         font-size: 1.5rem;
@@ -683,7 +674,8 @@ footer .flex__wrapper {
     .section__boost article {
         max-width: 250px;
     }
-    .section__boost article img{
+
+    .section__boost article img {
         width: 100%;
     }
 
@@ -699,7 +691,6 @@ footer .flex__wrapper {
     }
 
     /*section__cutaway*/
-
     .section__cutaway {
         padding: 53px 0 65px 0;
     }
@@ -707,7 +698,6 @@ footer .flex__wrapper {
     .section__cutaway .flex__wrapper {
         gap: 12px;
     }
-
 
     /*section__software*/
     .section__software {
@@ -724,14 +714,15 @@ footer .flex__wrapper {
         gap: 30px;
     }
 
-    .section__software .cake{
+    .section__software .cake {
         min-width: 170px;
     }
-    .section__software .left img{
+
+    .section__software .left img {
         width: 100%;
     }
 
-       .section__software .right {
+    .section__software .right {
         padding: 20px 50px;
     }
 
@@ -740,12 +731,12 @@ footer .flex__wrapper {
     }
 
     /*section__tools*/
-
     .section__tools {
         padding: 110px 0 105px 0
     }
-    .section__tools img{
-    width: 100%;
+
+    .section__tools img {
+        width: 100%;
     }
 
     .section__tools .button {
@@ -754,7 +745,6 @@ footer .flex__wrapper {
     }
 
     /*.section__trial*/
-
     .section__trial {
         padding: 100px 0 120px 0;
     }
@@ -765,11 +755,11 @@ footer .flex__wrapper {
     }
 
     /*footer*/
-
     footer {
         padding: 65px 0 30px 0;
 
     }
+
     footer .left {
         min-width: 260px;
         margin-right: 50px;
@@ -781,12 +771,279 @@ footer .flex__wrapper {
         flex-wrap: wrap;
     }
 
-    .photo img{
+    .photo img {
         width: 100%;
     }
 
     .column {
         flex-basis: 170px;
     }
+}
 
+@media screen and (max-width: 767px) {
+    html {
+        font-size: 16px;
+    }
+
+    body {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        max-width: 630px;
+        min-width: 360px;
+    }
+
+    header .container {
+        max-width: 660px;
+    }
+
+    .menu {
+        min-height: 78px;
+    }
+
+    .logo {
+        margin-right: 20px;
+        min-height: 40px;
+        padding-top: 10px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    header .btn__wrapper {
+        margin-left: auto;
+        gap: 10px;
+        font-weight: 600;
+        font-size: 0.8rem;
+    }
+
+    header .button {
+        min-width: 90px;
+        padding: 4px 15px;
+    }
+
+    /*section__presentation*/
+    .section__presentation {
+        padding: 72px 0 85px 0;
+    }
+
+    .section__presentation .flex__wrapper {
+        align-items: flex-end;
+        flex-wrap: wrap;
+    }
+
+    .section__presentation .right {
+        min-width: 340px;
+    }
+
+    h1 {
+        margin-bottom: 40px;
+    }
+
+    .section__presentation p:first-of-type {
+        margin-bottom: 40px;
+    }
+
+    .section__presentation .btn__wrapper {
+        gap: 10px;
+        margin-bottom: 25px;
+    }
+
+    .section__presentation .button {
+        min-width: 110px;
+        padding: 8px 10px;
+    }
+
+    .left {
+        margin-bottom: 20px;
+    }
+
+    .note {
+        font-size: 0.8rem;
+    }
+
+    /*section__partners*/
+    .section__partners {
+        padding: 90px 0 90px 0;
+    }
+
+    .bottom {
+        gap: 55px;
+
+    }
+
+    /*section__main*/
+    .section__main {
+        padding: 90px 0 90px 0;
+    }
+
+    .flex__article {
+        gap: 35px;
+        margin-bottom: 60px;
+        flex-wrap: wrap;
+    }
+
+    .flex__article:nth-child(even) {
+        flex-direction: column-reverse;
+    }
+
+    .left .correct,
+    .right .correct,
+    .section__main p:first-of-type {
+        max-width: 767px;
+    }
+
+    .section__main p {
+        max-width: 767px;
+        margin-bottom: 30px;
+    }
+
+
+    /*section__promo*/
+    .section__promo {
+        padding: 65px 0 95px 0;
+    }
+
+    .section__promo .flex__wrapper {
+        gap: 70px;
+
+    }
+
+    .section__promo p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    /*section__boost*/
+    .section__boost {
+        padding: 154px 0 178px 0;
+    }
+
+    .section__boost .flex__wrapper {
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+
+    .section__boost h3 {
+        text-align: center;
+    }
+
+    .section__boost article {
+        max-width: 660px;
+        text-align: center;
+    }
+
+    .section__boost img {
+        margin-bottom: 50px;
+        max-width: 300px;
+    }
+
+    /*section__cutaway*/
+    .section__cutaway {
+        padding: 50px 0 95px 0;
+    }
+
+    .section__cutaway .right {
+        margin-bottom: 30px;
+    }
+
+    .section__cutaway .flex__wrapper {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .section__cutaway .note {
+        font-size: 0.95rem
+    }
+
+    /*section__software*/
+    .section__software {
+        padding: 60px 0 65px 0;
+    }
+
+    .section__software .flex__wrapper {
+        flex-wrap: wrap;
+
+    }
+
+    .section__software .left {
+        align-items: center;
+    }
+
+    .section__software .right {
+        display: flex;
+        border-top: 1px solid #000000;
+        border-left: none;
+        width: 100%;
+        align-items: baseline;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .section__software .right img:first-child {
+        margin: 30px 70px 0 0;
+    }
+
+    /*section__tools*/
+    .section__tools {
+        padding: 130px 0 110px 0;
+    }
+
+    .section__tools .button {
+        padding: 15px 18px;
+        min-width: 148px;
+    }
+
+    /*.section__trial*/
+    .section__trial {
+        padding: 118px 0 156px 0;
+    }
+
+    .section__trial .button {
+        padding: 12px 32px;
+        min-width: 150px;
+    }
+
+    /*footer*/
+    footer .left {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 767px;
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+
+    footer .right {
+        max-width: 560px;
+        gap: 50px;
+    }
+
+    .photo {
+        max-width: 300px;
+    }
+
+    footer .logo {
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+
+    footer .flex__wrapper {
+        padding-bottom: 65px;
+        flex-wrap: wrap;
+    }
+
+    .flex__wrapper.bottom {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid black;
+        width: 100%;
+        padding: 50px 0 0 0;
+        gap: 10px;
+    }
 }
