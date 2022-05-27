@@ -791,7 +791,7 @@ footer .flex__wrapper {
 
     .container {
         max-width: 630px;
-        min-width: 360px;
+        min-width: 320px;
     }
 
     header .container {
@@ -806,6 +806,10 @@ footer .flex__wrapper {
         margin-right: 20px;
         min-height: 40px;
         padding-top: 10px;
+    }
+
+    .logo img {
+        max-width: 85px;
     }
 
     nav {
@@ -835,7 +839,7 @@ footer .flex__wrapper {
     }
 
     .section__presentation .right {
-        min-width: 340px;
+        min-width: 300px;
     }
 
     h1 {
@@ -900,7 +904,6 @@ footer .flex__wrapper {
         margin-bottom: 30px;
     }
 
-
     /*section__promo*/
     .section__promo {
         padding: 65px 0 95px 0;
@@ -948,6 +951,9 @@ footer .flex__wrapper {
     .section__cutaway .right {
         margin-bottom: 30px;
     }
+    .section__cutaway .right img {
+        width: 100%;
+    }
 
     .section__cutaway .flex__wrapper {
         flex-wrap: wrap;
@@ -971,6 +977,7 @@ footer .flex__wrapper {
 
     .section__software .left {
         align-items: center;
+        flex-wrap: wrap;
     }
 
     .section__software .right {
@@ -980,11 +987,12 @@ footer .flex__wrapper {
         width: 100%;
         align-items: baseline;
         justify-content: center;
+        flex-wrap: wrap;
         gap: 20px;
     }
 
     .section__software .right img:first-child {
-        margin: 30px 70px 0 0;
+        margin: 30px 20px 0 0;
     }
 
     /*section__tools*/
@@ -1019,7 +1027,8 @@ footer .flex__wrapper {
 
     footer .right {
         max-width: 560px;
-        gap: 50px;
+        min-width: 300px;
+        gap: 10px;
     }
 
     .photo {
