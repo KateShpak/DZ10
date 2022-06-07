@@ -1,0 +1,125 @@
+@use "../base/functions" as *;
+@use "../base/mixins" as *;
+@use "../base/variables" as *;
+
+header {
+  background-color: $white;
+  border-bottom: 1px solid $gray;
+
+  .container {
+    max-width: 1360px;
+
+    .btn__wrapper {
+      margin-left: auto;
+      gap: 10px;
+      @include fonts($fontBold, 0.8rem, 1.2rem);
+    }
+
+    .button {
+      @include buttonSize(120px, 6px, 25px);
+    }
+  }
+}
+
+.menu {
+  @include flexCenterVert;
+  min-height: 95px;
+  flex-wrap: wrap;
+}
+
+nav {
+  display: inline-flex;
+  gap: 42px;
+  font-style: normal;
+  @include fonts($fontNormal, 0.75rem, 1rem);
+}
+
+.btn__wrapper {
+  display: inline-flex;
+}
+
+.logo {
+  margin-right: 51px;
+  min-height: 40px;
+  padding-top: 10px;
+}
+
+.btn__white {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  @include buttonStyle($black, $white);
+
+  &:hover {
+    border: 1px solid $orange;
+    color: $orange;
+  }
+}
+
+.section__main {
+  article {
+    p {
+      @include linkStyles($black, $orange);
+    }
+  }
+}
+
+.section__promo {
+  article {
+    p {
+      @include linkStyles($black, $orange);
+    }
+  }
+}
+
+.section__boost {
+  article {
+    @include linkStyles($black, $orange);
+  }
+}
+
+@include tablet {
+  .logo {
+    margin-right: 5px;
+  }
+  nav {
+    margin: 0 auto;
+    gap: 18px;
+  }
+  header {
+    .button {
+      @include buttonSize(100px, 5px, 20px);
+    }
+  }
+}
+
+@include mobile {
+  header {
+    .container {
+      max-width: 660px;
+    }
+
+    .btn__wrapper {
+      margin-left: auto;
+      gap: 10px;
+      @include fonts($fontBold, 0.8rem, $lineHeight: 1.2rem);
+    }
+
+    .button {
+      @include buttonSize(90px, 4px, 15px);
+    }
+  }
+  .menu {
+    min-height: 78px;
+  }
+  .logo {
+    margin-right: 20px;
+    min-height: 40px;
+    padding-top: 10px;
+
+    img {
+      max-width: 85px;
+    }
+  }
+  nav {
+    display: none;
+  }
+}

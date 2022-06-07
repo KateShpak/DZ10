@@ -1,0 +1,106 @@
+@use "../../base/functions" as *;
+@use "../../base/mixins" as *;
+@use "../../base/variables" as *;
+
+.section__presentation {
+  padding: 129px 0 172px 0;
+
+  .flex__wrapper {
+    align-items: flex-end;
+  }
+
+  .left {
+    width: 552px;
+  }
+
+  .right {
+    max-width: 684px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  p {
+    &:first-of-type {
+      max-width: 470px;
+      margin-bottom: 50px;
+    }
+  }
+
+  .btn__wrapper {
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+
+  .button {
+    @include buttonSize(160px, 13px, 25px);
+  }
+}
+
+.section__presentation.p__basic {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+h1 {
+  margin-bottom: 50px;
+  @include fonts($fontBold, 3.25rem, 3.5rem)
+}
+
+.note {
+  @include fonts($fontNormal, 0.75rem, 1rem)
+}
+
+@include tablet {
+  .section__presentation {
+    padding: 100px 0 142px 0;
+
+    .right {
+      min-width: 410px;
+    }
+
+    .button {
+      @include buttonSize(125px, 10px, 20px);
+    }
+  }
+}
+
+@include mobile {
+  .section__presentation {
+    padding: 72px 0 85px 0;
+
+    .flex__wrapper {
+      align-items: flex-end;
+      flex-wrap: wrap;
+    }
+
+    .right {
+      min-width: 300px;
+    }
+
+    p {
+      &:first-of-type {
+        margin-bottom: 40px;
+      }
+    }
+
+    .btn__wrapper {
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    .button {
+      @include buttonSize(110px, 8px, 10px);
+    }
+  }
+  h1 {
+    margin-bottom: 40px;
+  }
+  .left {
+    margin-bottom: 20px;
+  }
+  .note {
+    font-size: 0.8rem;
+  }
+}

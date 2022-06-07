@@ -1,0 +1,69 @@
+@mixin containerWrap($padding, $maxWidth) {
+  padding: 0 $padding;
+  max-width: $maxWidth;
+}
+
+@mixin buttonSize($minWidth, $paddingVert, $paddingHor) {
+  min-width: $minWidth;
+  padding: $paddingVert $paddingHor;
+}
+
+@mixin buttonStyle($color: null, $bgk: null, $weight: null, $size: null) {
+  @if $color {
+    color: $color;
+  }
+  @if $bgk {
+    background: $bgk;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $size {
+    font-size: $size;
+  }
+}
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexCenterVert {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexCenterHoriz {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin linkStyles($color, $colorHover) {
+  a {
+    text-decoration: underline $color;
+
+    &:hover {
+      text-decoration: underline $colorHover;
+    }
+  }
+}
+
+@mixin fonts($fontWait, $fontSize, $lineHeight: 1.2rem) {
+  font-weight: $fontWait;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+}
+
+@mixin tablet {
+  @media only screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+

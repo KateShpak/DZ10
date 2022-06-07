@@ -1,0 +1,47 @@
+@use "../../base/functions" as *;
+@use "../../base/mixins" as *;
+@use "../../base/variables" as *;
+
+.section__partners {
+  background: $lightOrange;
+  padding: 108px 0 104px 0;
+
+  .flex__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.middle {
+  max-width: 720px;
+  text-align: center;
+  margin-bottom: 70px;
+  @include fonts($fontBold, 2.5rem, 3rem);
+}
+
+.bottom {
+  display: inline-flex;
+  gap: 103px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@include tablet {
+  .section__partners {
+    padding: 100px 0 96px 0;
+  }
+  .bottom {
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  @include mobile {
+    .section__partners {
+      padding: 90px 0 90px 0;
+    }
+    .bottom {
+      gap: 55px;
+    }
+  }
+}

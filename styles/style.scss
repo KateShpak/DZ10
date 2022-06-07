@@ -1,0 +1,17 @@
+@use "./base/_fonts";
+@use "./base/reset";
+
+@use "./modules/common";
+@use "./modules/header";
+
+@use "./modules/sections/presentation";
+@use "./modules/sections/partners";
+@use "./modules/sections/main";
+@use "./modules/sections/promo";
+@use "./modules/sections/boost";
+@use "./modules/sections/cutaway";
+@use "./modules/sections/software";
+@use "./modules/sections/tools";
+@use "./modules/sections/trial";
+
+@use "./modules/footer";

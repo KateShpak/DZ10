@@ -1,0 +1,10 @@
+@function autoSize($screenType) {
+  $fontSize: 20;
+  @if $screenType == tablet {
+    $fontSize: $fontSize - 2;
+  } @else if $screenType == mobile {
+    $fontSize: $fontSize - 4;
+  }
+
+  @return $fontSize*1px;
+}

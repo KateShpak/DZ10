@@ -1,0 +1,77 @@
+@use "../base/functions" as *;
+@use "../base/mixins" as *;
+@use "../base/variables" as *;
+
+
+html {
+  font-size: autoSize(full);
+}
+
+body {
+  font-family: $fontFamilyRegular;
+  font-style: normal;
+  color: $black;
+  @include fonts($fontNormal, 1rem, 1.5rem);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $fontFamilySemibold;
+}
+
+.container {
+  margin: 0 auto;
+  @include containerWrap(10px, $maxWidthFull);
+}
+
+section {
+  background-color: $white;
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+
+  &:hover {
+    color: $orange;
+  }
+}
+
+.button {
+  text-align: center;
+  @include buttonStyle($white, $orange, $fontBold, 0.8rem);
+
+  &:hover {
+    color: $black;
+  }
+}
+
+.flex__wrapper {
+  display: flex;
+}
+
+@include tablet {
+  html {
+    font-size: autoSize(tablet);
+  }
+  .container {
+    max-width: $maxWidthTablet;
+  }
+  header {
+    .container {
+      max-width: 920px;
+    }
+  }
+}
+
+@include mobile {
+  html {
+    font-size: autoSize(mobile);
+  }
+  body {
+    font-size: 1.2rem;
+  }
+  .container {
+    max-width: $maxWidthMobile;
+    min-width: 320px;
+  }
+}

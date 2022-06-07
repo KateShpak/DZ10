@@ -1,0 +1,57 @@
+@use "../../base/functions" as *;
+@use "../../base/mixins" as *;
+@use "../../base/variables" as *;
+
+.section__cutaway {
+  padding: 53px 0 105px 0;
+  background: $lightBlue;
+
+  .flex__wrapper {
+    justify-content: space-between;
+  }
+
+  .p__basic {
+    max-width: 920px;
+    margin-bottom: 23px;
+    @include fonts($fontNormal, 1.5rem, 2rem);
+  }
+
+  .note {
+    margin-bottom: 7px;
+    @include fonts($fontNormal, 0.75rem, 1rem);
+  }
+}
+
+@include tablet {
+  .section__cutaway {
+    padding: 53px 0 65px 0;
+
+    .flex__wrapper {
+      gap: 12px;
+    }
+  }
+}
+
+@include mobile {
+  .section__cutaway {
+    padding: 50px 0 95px 0;
+
+    .right {
+      margin-bottom: 30px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .flex__wrapper {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    .note {
+      font-size: 0.95rem;
+    }
+  }
+}

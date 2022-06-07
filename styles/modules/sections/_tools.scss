@@ -1,0 +1,56 @@
+@use "../../base/functions" as *;
+@use "../../base/mixins" as *;
+@use "../../base/variables" as *;
+
+.section__tools {
+  text-align: center;
+  padding: 186px 0 162px 0;
+
+  .flex__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h3 {
+    max-width: 790px;
+    @include fonts($fontBold, 3.25rem, 3.75rem);
+  }
+
+  p {
+    max-width: 539px;
+    margin-bottom: 25px;
+    @include fonts($fontNormal, 1.25rem, 1.5rem);
+  }
+
+  img {
+    margin-bottom: 32px;
+  }
+
+  .button {
+    @include buttonSize(193px, 15px, 20px);
+  }
+}
+
+@include tablet {
+  .section__tools {
+    padding: 110px 0 105px 0;
+
+    img {
+      width: 100%;
+    }
+
+    .button {
+      @include buttonSize(167px, 12px, 15px);
+    }
+  }
+}
+
+@include mobile {
+  .section__tools {
+    padding: 130px 0 110px 0;
+
+    .button {
+      @include buttonSize(148px, 15px, 18px);
+    }
+  }
+}

@@ -1,0 +1,95 @@
+@use "../../base/functions" as *;
+@use "../../base/mixins" as *;
+@use "../../base/variables" as *;
+
+.section__boost {
+  padding: 154px 0 178px 0;
+
+  .flex__wrapper {
+    gap: 31px;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  h3 {
+    margin-bottom: 75px;
+    @include fonts($fontBold, 2.5rem, 3rem);
+  }
+
+  h5 {
+    margin-bottom: 34px;
+    @include fonts($fontBold, 1rem, 1.5rem);
+  }
+
+  article {
+    max-width: 407px;
+  }
+
+  p {
+    margin-bottom: 25px;
+    @include fonts($fontNormal, 1rem, 1.5rem);
+  }
+
+  img {
+    margin-bottom: 50px;
+  }
+}
+
+@include tablet {
+  .section__boost {
+    padding: 90px 0 135px 0;
+
+    .flex__wrapper {
+      gap: 31px;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    h5 {
+      margin-bottom: 34px;
+      @include fonts($fontBold, 1.5rem, $lineHeight: 1.2rem);
+    }
+
+    article {
+      max-width: 250px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    p {
+      margin-bottom: 25px;
+      @include fonts($fontNormal, 1rem, 1.5rem);
+    }
+
+    img {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@include mobile {
+  .section__boost {
+    padding: 154px 0 178px 0;
+
+    .flex__wrapper {
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    h3 {
+      text-align: center;
+    }
+
+    article {
+      max-width: 660px;
+      text-align: center;
+    }
+
+    img {
+      margin-bottom: 50px;
+      max-width: 300px;
+    }
+  }
+}

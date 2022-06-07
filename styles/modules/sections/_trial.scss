@@ -1,0 +1,58 @@
+@use "../../base/functions" as *;
+@use "../../base/mixins" as *;
+@use "../../base/variables" as *;
+
+.section__trial {
+  background: $lightOrange;
+  text-align: center;
+  padding: 120px 0 160px 0;
+
+  .flex__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h2 {
+    max-width: 784px;
+    margin-bottom: 30px;
+    @include fonts($fontBold, 3.25rem, 3.75rem);
+  }
+
+  p {
+     margin-bottom: 54px;
+    @include fonts($fontNormal, 1rem, 1.5rem);
+  }
+
+  .button {
+    @include buttonStyle(null, null, $fontBold, 0.85rem);
+    @include buttonSize(160px, 15px, 40px);
+  }
+}
+
+.btn__black {
+  @include buttonStyle($white, $black);
+  &:hover {
+    color: $lightOrange;
+  }
+}
+
+@include tablet {
+  .section__trial {
+    padding: 100px 0 120px 0;
+
+    .button {
+      @include buttonSize(140px, 12px, 20px);
+    }
+  }
+}
+
+@include mobile {
+  .section__trial {
+    padding: 118px 0 156px 0;
+
+    .button {
+      @include buttonSize(150px, 12px, 32px);
+    }
+  }
+}
+
